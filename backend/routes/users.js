@@ -92,17 +92,24 @@ router.get('/', requireAdmin, async (req, res) => {
 
 // GET /api/users/:id
 router.get('/:id', requireAdmin, async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    return res.status(400).json({ error: 'Invalid user id.' });
+  }
   try {
     const user = await collections.users.findOne({ _id: new ObjectId(req.params.id) });
     if (!user) return res.status(404).json({ error: 'User not found.' });
     res.json(publicUser(user));
-  } catch {
-    res.status(400).json({ error: 'Invalid user id.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to fetch user.' });
   }
 });
 
 // PUT /api/users/:id  (admin can change name and role)
 router.put('/:id', requireAdmin, async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    return res.status(400).json({ error: 'Invalid user id.' });
+  }
   try {
     const { name, role } = req.body;
     const update = {};
@@ -129,13 +136,17 @@ router.put('/:id', requireAdmin, async (req, res) => {
       details: `Admin updated user ${req.params.id} (${JSON.stringify(update)})`,
     });
     res.json({ message: 'User updated.' });
-  } catch {
-    res.status(400).json({ error: 'Invalid user id.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to update user.' });
   }
 });
 
 // DELETE /api/users/:id  (admin deletes a user + their expenses)
 router.delete('/:id', requireAdmin, async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    return res.status(400).json({ error: 'Invalid user id.' });
+  }
   try {
     if (req.params.id === req.user.userId) {
       return res.status(400).json({ error: 'Admins cannot delete their own account here.' });
@@ -155,8 +166,9 @@ router.delete('/:id', requireAdmin, async (req, res) => {
       details: `Admin deleted user ${req.params.id}`,
     });
     res.json({ message: 'User deleted.' });
-  } catch {
-    res.status(400).json({ error: 'Invalid user id.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to delete user.' });
   }
 });
 
