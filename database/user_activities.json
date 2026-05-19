@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d75b",
+    "userId": "6a0c07fa0a55cf6d7ba9d753",
+    "email": "admin@example.com",
+    "action": "login",
+    "entity": null,
+    "entityId": null,
+    "details": "admin@example.com logged in",
+    "timestamp": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d75c",
+    "userId": "6a0c07fa0a55cf6d7ba9d754",
+    "email": "alice@example.com",
+    "action": "register",
+    "entity": "user",
+    "entityId": "6a0c07fa0a55cf6d7ba9d754",
+    "details": "New account created: alice@example.com",
+    "timestamp": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d75d",
+    "userId": "6a0c07fa0a55cf6d7ba9d754",
+    "email": "alice@example.com",
+    "action": "create",
+    "entity": "expense",
+    "entityId": null,
+    "details": "Added expense \"Groceries\" ($45.5)",
+    "timestamp": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d75e",
+    "userId": "6a0c07fa0a55cf6d7ba9d755",
+    "email": "bob@example.com",
+    "action": "login",
+    "entity": null,
+    "entityId": null,
+    "details": "bob@example.com logged in",
+    "timestamp": "2026-05-19T06:49:30.147Z"
+  }
+]

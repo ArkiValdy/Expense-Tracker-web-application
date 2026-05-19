@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d756",
+    "userId": "6a0c07fa0a55cf6d7ba9d754",
+    "title": "Groceries",
+    "category": "Food",
+    "amount": 45.5,
+    "date": "2026-05-01",
+    "description": "Weekly supermarket shopping",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d757",
+    "userId": "6a0c07fa0a55cf6d7ba9d754",
+    "title": "Bus Card Top-up",
+    "category": "Transport",
+    "amount": 20,
+    "date": "2026-05-02",
+    "description": "Monthly commute",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d758",
+    "userId": "6a0c07fa0a55cf6d7ba9d754",
+    "title": "Movie Night",
+    "category": "Entertainment",
+    "amount": 32,
+    "date": "2026-05-05",
+    "description": "Cinema tickets",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d759",
+    "userId": "6a0c07fa0a55cf6d7ba9d755",
+    "title": "Electricity Bill",
+    "category": "Bills",
+    "amount": 88.9,
+    "date": "2026-05-03",
+    "description": "April usage",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d75a",
+    "userId": "6a0c07fa0a55cf6d7ba9d755",
+    "title": "New Headphones",
+    "category": "Shopping",
+    "amount": 120,
+    "date": "2026-05-06",
+    "description": "Noise cancelling",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  }
+]

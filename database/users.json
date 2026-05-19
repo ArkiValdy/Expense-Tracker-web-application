@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d753",
+    "name": "Arki Valdy",
+    "email": "admin@example.com",
+    "passwordHash": "$2a$10$OJ7b7OQuHw05JlEW/3r4neYiexRm3a34ilCXEQMY5gb5aXAAJrrra",
+    "role": "admin",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d754",
+    "name": "Alice Tan",
+    "email": "alice@example.com",
+    "passwordHash": "$2a$10$E8o/zKeYY7qp5fShu92xZuCzjanK334ZbakfPgtXV6E30D85xZv3W",
+    "role": "user",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  },
+  {
+    "_id": "6a0c07fa0a55cf6d7ba9d755",
+    "name": "Bob Lee",
+    "email": "bob@example.com",
+    "passwordHash": "$2a$10$AiwAiEPAQrPRlTZSbXKzIuHvol1y3moONKaVeYCrBsgJmSmigtrm2",
+    "role": "user",
+    "createdAt": "2026-05-19T06:49:30.147Z"
+  }
+]
