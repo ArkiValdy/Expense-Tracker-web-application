@@ -25,6 +25,9 @@ router.get('/', async (req, res) => {
 
 // DELETE /api/activity/:id  (remove a single log entry)
 router.delete('/:id', async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    return res.status(400).json({ error: 'Invalid activity id.' });
+  }
   try {
     const result = await collections.activities.deleteOne({
       _id: new ObjectId(req.params.id),
@@ -33,8 +36,9 @@ router.delete('/:id', async (req, res) => {
       return res.status(404).json({ error: 'Activity entry not found.' });
     }
     res.json({ message: 'Activity entry deleted.' });
-  } catch {
-    res.status(400).json({ error: 'Invalid activity id.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to delete activity entry.' });
   }
 });
 
